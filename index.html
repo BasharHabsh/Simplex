@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Programming Solver</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<body>
+    <h1>Linear Programming Solver</h1>
+    <form id="lp-form">
+        <label for="c">Objective Function</label>
+        <input type="text" id="c" placeholder="2 3" required><br>
+
+        <label for="A">Constraint Left-hand Side</label>
+        <textarea id="A" placeholder=" 1 2 \n 3 4" required></textarea><br>
+
+        <label for="b">Constraint Right-hand Side</label>
+        <input type="text" id="b" placeholder="5 6" required><br>
+
+        <button type="button" onclick="solveLP()">Solve</button>
+        <h2>Results:</h2>
+        <div id="result"></div>
+    </form>
+    <script src="/simplix.js"></script>
+</body>
+</html>
